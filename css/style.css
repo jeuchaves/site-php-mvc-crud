@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+body {
+    background-color: #6495ed;
+}
+
+.body_content {
+    width: 75vw;
+    background-color: white;
+    margin: 0 auto;
+    margin-block: 8px;
+    border: 6px solid #ccc;
+}
+
+.cabecalho ul li {
+    display: inline-block;
+    padding-inline: 8px;
+}
+
+.cabecalho ul li:not(:last-child) {
+    border-right: 3px solid black;
+}
+
+.cabecalho ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.cabecalho ul li a:hover {
+    text-decoration: underline;
+}
+
+.cabecalho {
+    border-bottom: 8px solid #ccc;
+}
+
+.cabecalho,
+section {
+    padding: 24px;
+}
+
+#posts {
+    padding: 12px;
+}
+
+#posts article {
+    margin-block: 24px;
+}
+
+#posts article h2 a {
+    color: black;
+    text-decoration: none;
+}
+
+    #posts article h2 a:hover {
+        text-decoration: underline;
+    }
+
+    #posts article p {
+        margin-block: 12px;
+        padding-left: 12px;
+    }
+
+    #posts article:not(:last-child) {
+        border-bottom: 2px solid #ccc;
+    }
+
