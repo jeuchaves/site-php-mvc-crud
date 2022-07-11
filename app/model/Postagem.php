@@ -40,6 +40,7 @@
                 throw new Exception("Não foi encontrado nenhum registro no banco");
             }
 
+            $resultado->comentarios = Comentario::selecionarComentarios($resultado->id);
             return $resultado;
         }
     }

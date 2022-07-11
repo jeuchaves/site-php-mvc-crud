@@ -18,6 +18,7 @@ class PostController
             $parametros = array();
             $parametros['titulo'] = $postagem->titulo;
             $parametros['conteudo'] = $postagem->conteudo;
+            $parametros['comentarios'] = $postagem->comentarios;
 
             # Renderizando e mostrando na tela o resultado da página dinâmica
             $conteudo = $template->render($parametros);

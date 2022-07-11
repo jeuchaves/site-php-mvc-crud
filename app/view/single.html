@@ -4,5 +4,12 @@
             <h2>{{titulo}}</h2>
         </header>
         <p>{{conteudo}}</p>
+        <h2>Comentários</h2>
+        {% for comentario in comentarios %}
+        <div class="comentario">
+            <h4>{{comentario.nome}} disse:</h4>
+            <p>{{comentario.comentario}}</p>
+        </div>
+        {% endfor %}
     </article>
 </section>

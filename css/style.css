@@ -12,6 +12,17 @@ body {
     background-color: #6495ed;
 }
 
+.comentario {
+    border: 1px solid #ccc;
+    margin-block: 12px;
+    padding: 8px;
+}
+
+.comentario > p {
+    font-weight: 100;
+    color: rgb(0, 0, 0, 0.8);
+}
+
 .body_content {
     width: 75vw;
     background-color: white;
