@@ -1,22 +1,24 @@
 <?php
 
-class HomeController
+class PostController
 {
-    public function index()
+    public function index($param)
     {
         try {
             
             # Carregar para objetos Postagem os valores obtidos do banco de dados
-            $postagens = Postagem::selecionaTodos();
+            $postagem = Postagem::selecionaPorId($param);
 
             # Carregamento do Twig
             $loader = new \Twig\Loader\FilesystemLoader('app/view');
             $twig = new \Twig\Environment($loader);
-            $template = $twig->load('home.html');
+            $template = $twig->load('single.html');
 
             # Informando parametros da página dinâmica
             $parametros = array();
-            $parametros['postagens'] = $postagens;
+            $parametros['titulo'] = $postagem->titulo;
+            $parametros['conteudo'] = $postagem->conteudo;
+            $parametros['comentarios'] = $postagem->comentarios;
 
             # Renderizando e mostrando na tela o resultado da página dinâmica
             $conteudo = $template->render($parametros);

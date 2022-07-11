@@ -17,8 +17,15 @@ class Core {
         if(!class_exists($controller))
             $controller = 'ErroController';
 
+        # Verificar a existencia de um @param id
+        if(isset($urlGet['id']) && $urlGet['id'] != null) {
+            $id = $urlGet['id'];
+        } else {
+            $id = null;
+        }
+
         # Chama a função $acao da classe $controller sem nenhum parâmetro
-        call_user_func_array(array(new $controller, $acao), array());
+        call_user_func_array(array(new $controller, $acao), array($id));
         
     }
 }
